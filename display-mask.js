@@ -6,10 +6,8 @@
 
     Mask.$inject = ['MaskService'];
     function Mask(MaskService) {
-        var value = null;
-        
-        MaskFilter.$stateful = true;
-        
+        return MaskFilter;
+
         function MaskFilter(input, mask) {
             var maskService = MaskService.create();
             input = input || '';
@@ -18,16 +16,9 @@
                 mask = { mask: mask };
             }
 
-            if (!value) {
-                maskService.generateRegex(mask).then(function() {
-                    value = maskService.getViewValue(input).withDivisors();
-                });
-            }
+            maskService.generateRegex(mask);
 
-            return value;
-        };
-        
-        
-        return MaskFilter;
+            return maskService.getViewValue(input).withDivisors();
+        }
     }
 })();
