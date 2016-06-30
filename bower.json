@@ -1,0 +1,31 @@
+{
+    "name": "displayMask",
+    "homepage": "https://github.com/alairjt/displayMask",
+    "authors": [
+        "alair.tavares <alair.tavares@nexxera.com>"
+    ],
+    "description": "AngularJS Filter for display values with custom masks.",
+    "main": "display-mask.js",
+    "dependencies": {
+        "ngMask": "angular-mask#^3.1.1"
+    },
+    "keywords": [
+        "AngularJS",
+        "Angular",
+        "Filter",
+        "mask",
+        "display",
+        "custom",
+        "apply",
+        "generic",
+        "value"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
