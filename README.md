@@ -40,4 +40,7 @@ AngularJS filter for display values with custom masks.
    <span>{{'01234567890' | mask:'999.999.999-99'}}</span>
    ```
    
+   //012.345.678-90
+   
+   
     - "/" isn't a pattern. It's considered a divisor. Every divisor is automatically written by ngMask. [Check all available patterns here.](https://github.com/candreoliveira/ngMask/#available-patterns)
