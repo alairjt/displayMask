@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJS display-mask</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js"></script>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+
+        <script src="../bower_components/ngMask/dist/ngMask.js"></script>
+        <script src="../dist/display-mask.js"></script>
+    </head>
+
+    <body class="container">
+
+        <script>
+            var app = angular.module('demo', ['displayMask']);
+        </script>
+        <section id="mask">
+            <div class="page-header">
+                <h1>DisplayMask
+                    <small><a href="https://github.com/alairjt/displayMask">GitHub</a></small>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>What?</h3>
+
+                    <p>Apply a mask in the text.</p>
+                    <form name="demo" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3" for="masked">Setting Mask:</label>
+
+                            <div class="col-sm-9" ng-init="vm = {}">
+                                <input class="form-control" id="input-mask" name="input-mask" ng-model="vm.mask" placeholder="Write a mask" ui-mask-placeholder />
+                                <span id="span-result" class="help-inline">
+                                    <strong>{{'01234567890' | mask:vm.mask}}</strong>
+                                </span>
+                                <span class="help-inline">
+                                    ({{vm.mask ? 'With mask' : 'Without mask'}})
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-md-6">
+                    <h3>How?</h3>
+                    <p>In HTML.</p>
+                    <pre class="prettyprint"><span>{{</span>'01234567890' | mask:'999.999.999-99'<span>}}</span></pre>
+                    <p>{{'01234567890' | mask:'999.999.999-99'}}</p>
+                    <p>In JS.</p>
+                    <pre class="prettyprint"><span>var text = $filter('mask')('01234567890', '999.999.999-99');</span></pre>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
