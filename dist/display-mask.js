@@ -1,7 +1,7 @@
 /*!
  * displayMask
  * https://github.com/alairjt/displayMask
- * Version: 1.2.0 - 2016-09-02T14:53:27.564Z
+ * Version: 1.3.0 - 2016-09-02T14:53:44.984Z
  * License: MIT
  */
 
